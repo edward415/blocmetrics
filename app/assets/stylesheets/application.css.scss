@@ -23,7 +23,8 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+  padding-top: 75px;
+  background-color:black;
 }
 
 
@@ -103,3 +104,10 @@ body {
   margin-top: 0;
 }
 
+.media-body {
+  color: white;
+}
+
+h1, h2, h3, h4 {
+  color:white;
+}
