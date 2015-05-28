@@ -118,5 +118,9 @@ body {
 
 .sidebar{
   background-color: #2F2F2F;
-  border-right: 1px solid #6CA0DC;
+  border-right: none;
+}
+
+.nav-sidebar > li > a.current {
+  background-color: white;
 }

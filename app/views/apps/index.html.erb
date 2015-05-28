@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <h3><%= current_user.name || current_user.email %>'s Apps</h3>
+      <br>
+      <table class="table">
+        <tr>
+          <td>App <%= link_to " ", new_app_path, class: 'glyphicon glyphicon-plus' %></td>
+          <td>url</td>
+          <td>Vists</td>
+          <td>Tracking Status</td>
+          <td>Delete</td>
+        </tr>
+        <% @apps.each do |app| %>
+            <tr>
+              <td><%= link_to app.name, app_path(app) %> <%= link_to " ", edit_app_path(app), class: 'glyphicon glyphicon-paperclip' %></td>
+              <td><a href="http://<%= app.url %>"><%= app.url %></a></td>
+              <td>1</td>
+              <td>Active</td>
+              <td><%= link_to " ", app, method: :delete, class: 'glyphicon glyphicon-remove' %></td>
+            </tr>
+        <% end %>
+    
+    </div>
+  </div>
+</div>
