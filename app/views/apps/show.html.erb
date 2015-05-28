@@ -4,6 +4,13 @@
     <div class="col-md-8">
       <h2><%= @app.name %></h2>
       <p><%= @app.url %></p>
+      <table class='table'>
+      <% @events.each do |e| %>
+        <tr><td><h4><%= e.count %></h4></td></tr>
+        <tr><td><h3><%= e[0] %></h3></td></tr>
+      <% end %>
+      </table>
+      </ul>
     </div>
   </div>
 </div>
