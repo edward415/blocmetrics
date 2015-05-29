@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
   
   resources :apps
-
+  
+  namespace :api, defaults: { format: :json } do
+    scope 'v1' do
+      resources :events, only: [:create]
+    end
+  end
+  
   devise_for :users
   
   get 'welcome/index'
