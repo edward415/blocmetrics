@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :events, only: [:create]
     end
   end
-  
+  # match 'api/v1/events.json' => "api/v1/events#index" 
   devise_for :users
   
   get 'welcome/index'
